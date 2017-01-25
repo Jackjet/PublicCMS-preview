@@ -91,7 +91,7 @@ public class InstallServlet extends HttpServlet {
                         String databaseConfiFile = properties.getProperty(PROPERTY_NAME_DATABASE);
                         saveDataBaseConfig(databaseConfiFile, request.getParameter("host"), request.getParameter("port"),
                                 request.getParameter("database"), request.getParameter("username"),
-                                request.getParameter(" password"));
+                                request.getParameter("password"));//随智阔修改去掉空格
                         checkDataBaseConfig(databaseConfiFile);
                         map.put("message", "success");
                     } catch (PropertyVetoException | SQLException e) {
